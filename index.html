@@ -1,134 +1,189 @@
 <!DOCTYPE html>
+<html lang="pt-br">
 <head>
-
-  <meta charset="utf-8" />
-  <title>Profile Picture Overlay</title>
-
-	<style>
-		#overlay-img, .overlay-img {
-			width:500px;
-			height:auto;
-			display:block;
-			margin: 30px auto;
-		}
-
-		input {
-			display: block;
-			margin: 10px auto;
-		}
-
-		.inputfile {
-			width: 0.1px;
-			height: 0.1px;
-			opacity: 0;
-			overflow: hidden;
-			position: absolute;
-			z-index: -1;
-		}
-
-		.inputfile + label {
-			border-radius: 2px;
-			margin-top:40px;
-			display: inline-block;
-			padding: 10px 30px;
-		    font-weight: 700;
-		    text-transform: uppercase;
-		  	vertical-align: middle;
-		    color: white;
-		    background-color: #e62b1e;
-		    -webkit-tap-highlight-color: transparent;
-		}
-
-		.inputfile:focus + label,
-		.inputfile + label:hover {
-		    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
-		}
-
-		.inputfile + label {
-			cursor: pointer; /* "hand" cursor */
-		}
-
-		.inputfile:focus + label {
-			outline: 1px dotted #000;
-			outline: -webkit-focus-ring-color auto 5px;
-		}
-
-		.overlay-div {
-			text-align:center;
-		}
-
-		.madeBy {
-			text-align:center;
-			font-size: .7em;
-			margin: 50px auto 10px auto;
-		}
-
-	</style>
-
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1920, height=1080, initial-scale=1.0">
+  <title>ExitLag Bday 2025</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+    body {
+      background: black;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+    }
+    h2 {
+      color: #ff3b30;
+      font-size: 36px;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+    p {
+      font-size: 16px;
+      color: #d1d1d1;
+      max-width: 800px;
+      line-height: 1.5;
+    }
+    ul {
+      background: rgba(255, 255, 255, 0.07);
+      padding: 30px;
+      border-radius: 12px;
+      font-size: 16px;
+      max-width: 600px;
+      color: #f1f1f1;
+      list-style: decimal;
+      text-align: left;
+      margin-top: 15px;
+    }
+    ul li {
+      margin: 8px 0;
+    }
+    .overlay-div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 2px;
+    }
+    #overlay-img {
+      max-width: 400px;
+      border-radius: 10px;
+      box-shadow: 0 4px 100px rgba(255, 59, 48, 0.5);
+      transition: transform 0.3s ease-in-out;
+    }
+    #overlay-img:hover {
+      transform: scale(1.05);
+    }
+    .inputfile {
+      width: 0.1px;
+      height: 0.1px;
+      opacity: 0;
+      overflow: hidden;
+      position: absolute;
+      z-index: -1;
+    }
+    .inputfile + label {
+      border-radius: 8px;
+      padding: 12px 60px;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: #ffffff;
+      background: linear-gradient(90deg, #ff3b30, #e62b1e);
+      cursor: pointer;
+      font-size: 16px;
+      transition: transform 0.2s, box-shadow 0.3s;
+      margin-top: 20px;
+      display: inline-block;
+    }
+    .inputfile + label:hover {
+      box-shadow: 0 4px 12px rgba(255, 59, 48, 0.4);
+      transform: scale(1.05);
+    }
+    .language-buttons {
+      margin-bottom: 20px;
+    }
+    .language-buttons button {
+      padding: 8px 16px;
+      font-size: 12px;
+      border-radius: 5px;
+      background: #333333;
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin: 5px;
+    }
+    .language-buttons button:hover {
+      background: #ff3b30;
+    }
+  </style>
 </head>
 <body>
-
-
   <script type="text/javascript" src="caman.full.js"></script>
 
+  <div class="language-buttons">
+    <button onclick="changeLanguage('pt')">🇧🇷 Português</button>
+    <button onclick="changeLanguage('en')">🇺🇸 English</button>
+  </div>
 
-      <div>
-          <h2>Get excited for [insert amazing cause/event here]!</h2>
-          <p>Create a profile overlay with our theme. How better to show your anticipation for [insert amazing cause/event here]? This is how you can create your overlay:</p>
-          <ol>
-          	<li><b>Locate</b> your profile picture on your computer, <b>or download</b> your profile picture from e.g. Facebook (right-click and choose "Save As...").</li>
-          	<li><b>Select</b> your picture below, and check the overlay. <b>Square pictures</b> work best, as the picture will automatically be cropped to be square.</li>
-          	<li><b>Download</b> your brand new picture (right-click and choose "Save As...") and set it on the social networks of your choice.</li>
-          </ol>
-          <p>Learn more about [insert amazing cause/event here] <a href="#">on this page</a>.</p>
-      </div>
+  <h2 id="title">🎉 Comemore o aniversário da ExitLag com estilo! 🎉</h2>
+  <p id="description">Troque sua foto de perfil do Slack com nosso tema exclusivo de aniversário! Siga os passos abaixo:</p>
+  
+  <ul>
+    <li id="step1"><b>Baixe</b> sua foto atual do Slack.</li>
+    <li id="step2"><b>Envie</b> sua foto abaixo para aplicar a moldura especial.</li>
+    <li id="step3"><b>Salve</b> sua nova foto e atualize seu perfil no Slack.</li>
+  </ul>
+  
+  <div class="overlay-div">
+    <input type="file" accept="image/*" onchange="loadFile(event)" id="file" class="inputfile">
+    <label for="file" id="upload-label">ESCOLHA SUA FOTO DE PERFIL</label><br>
+    <img id="overlay-img" src="plain.png">
+  </div>
 
+  <script>
+    function changeLanguage(lang) {
+      var translations = {
+        "pt": {
+          "title": "🎉 Comemore o aniversário da ExitLag com estilo! 🎉",
+          "description": "Troque sua foto de perfil do Slack com nosso tema exclusivo de aniversário! Siga os passos abaixo:",
+          "step1": "<b>Baixe</b> sua foto atual do Slack.",
+          "step2": "<b>Envie</b> sua foto abaixo para aplicar a moldura especial.",
+          "step3": "<b>Salve</b> sua nova foto e atualize seu perfil no Slack.",
+          "upload-label": "ESCOLHA SUA FOTO DE PERFIL"
+        },
+        "en": {
+          "title": "🎉 Celebrate ExitLag's Birthday in Style! 🎉",
+          "description": "Change your Slack profile picture with our exclusive birthday theme! Follow the steps below:",
+          "step1": "<b>Download</b> your current Slack profile picture.",
+          "step2": "<b>Upload</b> your photo below to apply the special frame.",
+          "step3": "<b>Save</b> your new photo and update your Slack profile.",
+          "upload-label": "CHOOSE YOUR PROFILE PICTURE"
+        }
+      };
 
+      document.getElementById("title").innerHTML = translations[lang]["title"];
+      document.getElementById("description").innerHTML = translations[lang]["description"];
+      document.getElementById("step1").innerHTML = translations[lang]["step1"];
+      document.getElementById("step2").innerHTML = translations[lang]["step2"];
+      document.getElementById("step3").innerHTML = translations[lang]["step3"];
+      document.getElementById("upload-label").innerHTML = translations[lang]["upload-label"];
+    }
 
-<div class="overlay-div">
-  	<input type="file" accept="image/*" onchange="loadFile(event)" id="file" class="inputfile" />
-	<label for="file">Choose Profile Image</label>
+    var loadFile = function (event) {
+      var reader = new FileReader();
+      reader.onload = function () {
+        createOverlay(reader.result);
+      };
+      reader.readAsDataURL(event.target.files[0]);
+    };
 
-	<img id="overlay-img" src="plain.png"/>
-</div>
-	<script>
-	  var loadFile = function(event) {
-	    var reader = new FileReader();
-	    reader.onload = function() {
-	      createOverlay(reader.result);
-	    };
-	    reader.readAsDataURL(event.target.files[0]);
-	  };
+    var createOverlay = function (uploadImage) {
+      Caman("#overlay-img", function () {
+        this.brightness(5).render();
+        this.newLayer(function () {
+          this.setBlendingMode("normal");
+          this.opacity(100);
+          this.overlayImage(uploadImage);
+        });
+        this.newLayer(function () {
+          this.setBlendingMode("normal");
+          this.opacity(90);
+          this.overlayImage("overlay.png");
+        });
+      });
+    };
+  </script>
 
-	var createOverlay = function(uploadImage) {
-	  	var baseImg = uploadImage;
-	  	Caman("#overlay-img", function () {
-			this.brightness(5).render();
-			this.newLayer(function() {
-			    this.setBlendingMode("normal");
-			    this.opacity(100);
-			    this.overlayImage(baseImg);
-		  	});
-
-		  	this.newLayer(function() {
-			    this.setBlendingMode("normal");
-			    this.opacity(90);
-			    this.overlayImage('overlay.png');
-		  	});
-
-		  	$('#overlay-img').removeAttr('style');
-		});
-
-		$('#overlay-img').removeAttr('style');
-	};
-	</script>
-
-<div class="madeBy">Made by <a href="http://dora.rocks/" target="_blank">Dora Dzvonyar</a> using <a href="http://camanjs.com/" target="_blank">CamanJS</a></div>
-
-        
-        
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 
 </body>
 </html>
